@@ -1,6 +1,7 @@
 #include "days/day1.h"
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 int main() {
   printf("Advent of Code 2023 in C\n");
@@ -13,11 +14,15 @@ int main() {
     return 1;
   }
 
+  clock_t start = clock();
   if (strcmp(input, "d1p1") == 0) {
     day1_part1();
   } else {
     printf("Unknown program: %s\n", input);
   }
+  clock_t end = clock();
+  double elapsed = (double)(end - start) / CLOCKS_PER_SEC;
+  printf("Elapsed time: %.6f seconds\n", elapsed);
 
   return 0;
 }

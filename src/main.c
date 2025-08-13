@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
-void day1_part1() { printf("Running Day 1 Part 1\n"); }
+#include "days/day1.h"
 
 int main() {
 	printf("Advent of Code 2023 in C\n");
